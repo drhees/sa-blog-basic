@@ -484,28 +484,6 @@ add_action( 'widgets_init', 'skeleton_widgets_init' );
 
 }
 
-
-/*-----------------------------------------------------------------------------------*/
-// Featured Thumbnails
-// Utility function for defining conditional featured image settings
-/*-----------------------------------------------------------------------------------*/
-
-if ( !function_exists( 'skeleton_thumbnailer' ) ) {
-
-	function skeleton_thumbnailer($content) {
-		global $post;
-		global $id;
-		$size = 'squared150';
-		$align = 'alignleft scale-with-grid';
-		$image = get_the_post_thumbnail($id, $size, array('class' => $align));
-		$content =  $image . $content;
-		return $content;
-	}
-	add_filter('the_content','skeleton_thumbnailer');
-
-}
-
-
 /*-----------------------------------------------------------------------------------*/
 // Sets the post excerpt length to 40 characters.
 // To override this length in a child theme, remove the filter and add your own

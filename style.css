@@ -822,6 +822,10 @@ li.menu-item a:hover {
 	margin-right: 12px;
 }
 
+.post-meta {
+    overflow: hidden;
+}
+
 a.more-link {
 	display: block;
 	float: right;
